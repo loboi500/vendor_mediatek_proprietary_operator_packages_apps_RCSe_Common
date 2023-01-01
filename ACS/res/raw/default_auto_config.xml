@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<wap-provisioningdoc version="1.1">
+<characteristic type="VERS">
+   <parm name="version" value="0"/>
+   <parm name="validity" value="2160000"/>
+</characteristic>
+<characteristic type="APPLICATION">
+    <parm name="AppID" value="urn:oma:mo:ext-3gpp-ims:1.0"/>
+    <characteristic type="3GPP_IMS">
+        <parm name="AppID" value="ap2001"/>
+        <parm name="Name" value="RCS IMS Settings"/>
+     </characteristic>  <!-- end of 3GPP_IMS -->
+</characteristic>  <!-- end of application -->
+<characteristic type="APPLICATION">
+    <parm name="AppID" value="ap2002"/>
+    <parm name="To-AppRef" value="RCS-IMS-Settings"/>
+    <characteristic type="SERVICES">
+        <parm name="presencePrfl" value="0"/>
+        <parm name="SupportedRCSProfileVersions" value="UP 2.3"/>
+        <parm name="ChatAuth" value="0"/>
+        <parm name="GroupChatAuth" value="0"/>
+        <parm name="ftAuth" value="0"/>
+        <parm name="standaloneMsgAuth" value="0"/>
+        <parm name="geolocPushAuth" value="0"/>
+        <parm name="IR94VideoAUTH" value="1"/>
+        <characteristic type="Ext">
+            <characteristic type="DataOff">
+                <parm name="rcsMessagingDataOff" value="2"/>
+                <parm name="fileTransferDataOff" value="0"/>
+                <parm name="mmsDataOff" value="1"/>
+            </characteristic>   <!--End of "Dataoff"-->
+        </characteristic> <!--End of "Ext"-->
+    </characteristic> <!--End of "SERVICES"-->
+    <characteristic type="PRESENCE">
+        <parm name="client-obj-datalimit" value="13000"/>
+        <parm name="source-throttlepublish" value="30"/>
+    </characteristic> <!--End of "PRESENCE"-->
+    <characteristic type="MESSAGING">
+        <characteristic type="StandaloneMsg">
+            <parm name="MaxSize" value="1048576"/>
+            <parm name="SwitchoverSize" value="1300"/>
+            <parm name="exploder-uri" value="sip:n-way_messaging@one.att.net"/>
+        </characteristic>
+        <characteristic type="Chat">
+            <parm name="max_adhoc_group_size" value="100"/>
+            <parm name="conf-fcty-uri" value="sip:n-way_messaging@one.att.net"/>
+            <parm name="AutAccept" value="1"/>
+            <parm name="AutAcceptGroupChat" value="1"/>
+            <parm name="TimerIdle" value="330"/>
+            <parm name="MaxSize" value="8192"/>
+            <parm name="ChatRevokeTimer" value="0"/>
+            <parm name="reconnectGuardTimer" value="0"/>
+            <parm name="cfsTrigger" value="0"/>
+        </characteristic> <!--End of "Chat"-->
+            <parm name="max1ToManyRecipients" value="20"/>
+            <parm name="1toManySelectedTech" value="0"/>
+            <parm name="displayNotificationSwitch" value="0"/>
+        <characteristic type="FileTransfer">
+            <parm name="ftWarnSize" value="10240"/>
+            <parm name="MaxSizeFileTr" value="102400"/>
+            <parm name="ftAutAccept" value="1"/>
+            <parm name="ftHTTPCSURI" value="null"/>
+            <parm name="ftHTTPCSUser" value="null"/>
+            <parm name="ftHTTPCSPwd" value="null"/>
+            <parm name="ftHTTPFallback" value="0"/>
+        </characteristic>       <!--End of "FileTransfer"-->
+        <characteristic type="Chatbot">
+            <parm name="ChatbotDirectory" value=""/>
+            <parm name="BotinfoFQDNRoot" value=""/>
+            <parm name="SpecificChatbotsList" value=""/>
+            <parm name="IdentityInEnrichedSearch" value="1"/>
+            <parm name="PrivacyDisable" value="1"/>
+            <parm name="ChatbotMsgTech" value="1"/>
+        </characteristic>       <!--End of "Chatbot"-->
+        <characteristic type="MessageStore">
+        </characteristic>
+        <characteristic type="Plugins">
+        </characteristic>
+        <characteristic type="Ext"/>
+    </characteristic>       <!--End of "Messaging"-->
+    <characteristic type="CAPDISCOVERY">
+            <parm name="disableInitialAddressBookScan" value="1"/>
+            <parm name="pollingPeriod" value="0"/>
+            <parm name="capInfoExpiry" value="86400"/>
+            <parm name="nonRCScapInfoExpiry" value="259200"/>
+            <parm name="serviceAvailabilityInfoExpiry" value="60" />
+            <parm name="defaultDisc" value="1"/>
+            <parm name="capDiscCommonStack" value="0"/>
+            <characteristic type="Ext"/>
+    </characteristic> <!--End of "CAPDISCOVERY"-->
+    <characteristic type="SERVICEPROVIDEREXT">
+            <parm name="fthttpGroupChat" value="1"/>
+            <parm name="NMS_URL" value="vcnms-c2s.enc.att.net"/>
+            <parm name="NC_URL" value="cns.att.net"/>
+    </characteristic> <!--End of "SERVICEPROVIDEREXT"-->
+</characteristic> <!--End of "Application Appid: ap2002"-->
+</wap-provisioningdoc>
